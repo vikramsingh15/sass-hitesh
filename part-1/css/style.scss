@@ -1,0 +1,91 @@
+// variables
+// $primary-color:#fff;
+
+// maps
+$colors:(primary:#4834df,
+    accent:#01cbc6,
+    font:#fff);
+
+@function color($colorName) {
+    @return map-get($map: $colors, $key:$colorName);
+}
+
+$sizes:(fontTwo:"20px"
+);
+
+body,
+html {
+    height: 100%;
+}
+
+
+body {
+    margin: 0;
+
+    .container {
+        clip-path: polygon(50% 0%, 100% 5%, 100% 75%, 50% 100%, 0 90%, 0 0);
+        width: 100%;
+        height: 100%;
+        background-color: color(primary);
+        position: absolute;
+        z-index: -1;
+    }
+
+    header {
+        a {
+            text-decoration: none;
+            color: color(font);
+            font-size: 1.5rem;
+            display: block;
+            text-align: center;
+            padding-top: 20px;
+        }
+    }
+
+}
+
+
+main {
+    section#mainImage {
+        background-color: color((accent));
+        border-radius: 15px;
+        width: 80%;
+        margin: 1em auto;
+        color: color(font);
+        padding: 20px;
+    }
+
+    #mainImage p {
+        font-size: 1.35em;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+        margin-bottom: -15px;
+    }
+
+    #mainButton {
+        text-align: center;
+        color: color((font));
+
+
+        h1 {
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.3em;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 1.5em;
+            color: color(font);
+            background-color: color(accent);
+            margin-top: 15px;
+            padding: 5px 55px;
+            border-radius: 5px;
+        }
+    }
+
+}

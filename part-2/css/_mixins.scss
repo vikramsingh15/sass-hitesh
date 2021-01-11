@@ -1,0 +1,13 @@
+@mixin coverImage($location) {
+    background-image: linear-gradient(to top,
+            rgba(213, 223, 230, 0),
+            rgba(54, 47, 47, 0.6)),
+        url($location);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+//mixins are used to have code in different file to use it on so many pages
